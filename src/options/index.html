@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wait2Play — Settings &amp; Libraries</title>
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <div class="brand">
+          <img src="../icons/icon48.png" alt="" class="brand-icon" />
+          <div>
+            <h1>Wait2Play Settings &amp; Libraries</h1>
+            <p>Configure Multi-Launcher Duplicate Guard, Steam Backlog Tax Calculator, and Giveaway History.</p>
+          </div>
+        </div>
+        <div id="status-toast" class="toast" hidden></div>
+      </header>
+
+      <div class="grid">
+        <!-- 1. Multi-Launcher Duplicate Guard -->
+        <section class="card">
+          <h2>1. Multi-Launcher Duplicate Guard (CSV Import)</h2>
+          <p class="muted">
+            Flag games you already claimed on Epic, GOG, Amazon Prime Gaming, EA, Ubisoft or Steam. Accepts Playnite /
+            GOG Galaxy / Legendary CSV exports or a plain list with one game title per line.
+          </p>
+
+          <div class="actions" style="margin-bottom: 12px">
+            <button id="sync-gog-btn" class="btn primary">One-Click Sync GOG Library (logged-in session)</button>
+          </div>
+          <p class="muted" style="font-size: 11.5px">
+            Epic's library can't be read from your browser session, so export it with
+            <a href="https://github.com/derrod/legendary" target="_blank" rel="noopener noreferrer">Legendary</a>
+            (<code>legendary list --csv</code>) or Playnite and import it below.
+          </p>
+
+          <div class="row">
+            <label>
+              <span class="field-label">Default Launcher</span>
+              <select id="csv-source">
+                <option value="epic">Epic Games Store</option>
+                <option value="gog">GOG</option>
+                <option value="amazon">Amazon Prime Gaming</option>
+                <option value="steam">Steam</option>
+                <option value="ea">EA App / Origin</option>
+                <option value="ubisoft">Ubisoft Connect</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <div class="field-group">
+              <span class="field-label">CSV / TXT File</span>
+              <label class="dropzone" id="csv-dropzone">
+                <input type="file" id="csv-file" accept=".csv,.txt,.tsv" hidden />
+                <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 11V3M4.5 6.5L8 3l3.5 3.5M2.5 13h11" />
+                </svg>
+                <span id="csv-drop-label">Click or drag CSV / TXT here</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="block-label">
+            <span class="field-label">Or paste CSV / game titles (one per line or <code>Title,Source,Date</code>)</span>
+            <textarea
+              id="csv-text"
+              rows="5"
+              placeholder="Subnautica,epic,2018-12-14&#10;Control,epic,2021-06-10&#10;The Witcher 3: Wild Hunt,gog,2020-06-16"
+            ></textarea>
+          </label>
+
+          <div class="actions">
+            <button id="csv-import-btn" class="btn primary">Import Library</button>
+          </div>
+
+          <div class="sub-head">Imported Libraries</div>
+          <div id="library-stats" class="pill-list"></div>
+        </section>
+
+        <!-- 2. Steam Backlog Tax Calculator -->
+        <section class="card">
+          <h2>2. Steam Backlog Tax Calculator</h2>
+          <p class="muted">
+            Connect your Steam library in one click from your logged-in browser session (no API key or public profile
+            needed), or optionally provide a Steam Web API key to compare played hours against each game's estimated
+            time-to-beat (games under 25% of their completion length still count toward your unfinished backlog).
+          </p>
+
+          <div class="actions" style="margin-bottom: 12px">
+            <button id="sync-steam-session-btn" class="btn primary">
+              One-Click Sync from Logged-in Steam Session
+            </button>
+          </div>
+
+          <div class="sub-head" style="margin-top: 8px; margin-bottom: 8px">
+            Optional: Steam Web API (for exact playtime vs. time-to-beat filtering)
+          </div>
+
+          <div class="row">
+            <label>
+              <span class="field-label">
+                Steam Web API Key
+                <a href="https://steamcommunity.com/dev/apikey" target="_blank" rel="noopener noreferrer">Get key ↗</a>
+              </span>
+              <input type="password" id="steam-key" placeholder="32-character hex key (optional)" />
+            </label>
+            <label>
+              <span class="field-label">SteamID64 or Profile URL</span>
+              <input type="text" id="steam-id" placeholder="76561198... or steamcommunity.com/id/..." />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              <span class="field-label">Barely-touched threshold (mins, or &lt;25% of time-to-beat)</span>
+              <input type="number" id="unplayed-mins" min="1" max="600" value="60" />
+            </label>
+            <label>
+              <span class="field-label">Weekly gaming hours (optional)</span>
+              <input type="number" id="weekly-hours" min="1" max="100" step="0.5" placeholder="Auto from Steam (6h default)" />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="save-steam-btn" class="btn">Save Steam Settings</button>
+            <button id="sync-steam-btn" class="btn">Sync via Web API Key</button>
+          </div>
+
+          <div id="steam-sync-status" class="info-box">Not synced yet.</div>
+        </section>
+
+        <!-- 3. Giveaway & Subscription History -->
+        <section class="card">
+          <h2>3. Giveaway &amp; Subscription Dataset</h2>
+          <p class="muted">
+            Wait2Play ships with 1,440+ historical records across Epic, Prime Gaming, Steam, GOG, Humble Choice,
+            Humble/Fanatical Bundles, Game Pass, and PS Plus, and automatically polls live giveaway feeds plus the
+            GitHub dataset URL below.
+          </p>
+
+          <div id="history-stats" class="info-box">Loading dataset stats…</div>
+
+          <div class="actions">
+            <button id="refresh-epic-btn" class="btn primary">Refresh Live Giveaways</button>
+            <button id="export-history-btn" class="btn">Export Dataset JSON</button>
+          </div>
+
+          <div class="row" style="margin-top: 14px">
+            <div class="field-group">
+              <span class="field-label">Import JSON File</span>
+              <label class="dropzone" id="history-dropzone">
+                <input type="file" id="history-file" accept=".json" hidden />
+                <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M8 11V3M4.5 6.5L8 3l3.5 3.5M2.5 13h11" />
+                </svg>
+                <span id="history-drop-label">Click or drag JSON dataset here</span>
+              </label>
+            </div>
+            <div class="field-group">
+              <span class="field-label">Community Feed URL (auto-polled)</span>
+              <div class="url-fetch-row">
+                <input type="url" id="history-url" placeholder="https://.../history.json" />
+                <button id="fetch-history-btn" class="btn">Fetch</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Storefront Badges, Thresholds & Backup -->
+        <section class="card">
+          <h2>4. Storefront Badges, Thresholds &amp; Backup</h2>
+          <p class="muted">Choose where the inline Wait2Play card is shown, tune thresholds, or back up your data.</p>
+
+          <div class="check-grid">
+            <label class="check-row">
+              <input type="checkbox" id="site-steam" checked />
+              <span>Steam Store (<code>store.steampowered.com</code>)</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="site-gog" checked />
+              <span>GOG (<code>gog.com/game/*</code>)</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="site-epic" checked />
+              <span>Epic Games Store (<code>store.epicgames.com</code>)</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="site-humble" checked />
+              <span>Humble Store (<code>humblebundle.com/store</code>)</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="site-ggdeals" checked />
+              <span>GG.deals (<code>gg.deals</code>)</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="site-itad" checked />
+              <span>IsThereAnyDeal (<code>isthereanydeal.com</code>)</span>
+            </label>
+          </div>
+
+          <div class="sub-head" style="margin-top: 12px; margin-bottom: 6px">
+            Active Gaming Subscriptions (warn before buying games in your catalog)
+          </div>
+          <div class="check-grid">
+            <label class="check-row">
+              <input type="checkbox" id="sub-gamepass" />
+              <span>PC / Xbox Game Pass</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="sub-psplus" />
+              <span>PlayStation Plus Extra</span>
+            </label>
+          </div>
+
+          <div class="row" style="margin-top: 14px">
+            <label>
+              <span class="field-label">High Giveaway Risk threshold (%)</span>
+              <input type="number" id="thresh-giveaway" min="10" max="90" value="35" />
+            </label>
+            <label>
+              <span class="field-label">Hold for Bundle threshold (%)</span>
+              <input type="number" id="thresh-bundle" min="10" max="90" value="40" />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="save-prefs-btn" class="btn primary">Save Preferences</button>
+            <button id="clear-cache-btn" class="btn">Clear API Cache</button>
+          </div>
+
+          <div class="sub-head">Full Backup &amp; Restore</div>
+          <div class="actions">
+            <button id="export-backup-btn" class="btn">Export Full Backup (JSON)</button>
+            <label class="btn" style="cursor: pointer; display: inline-flex; align-items: center">
+              Import Backup (JSON)
+              <input type="file" id="import-backup-file" accept=".json" hidden />
+            </label>
+          </div>
+          <p class="muted" style="margin-top: 10px; font-size: 11.5px">
+            Privacy: All library data, Steam IDs, and settings stay in local browser storage on your device and are
+            never sent to any Wait2Play server.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "wait2play",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wait2Play browser extension: should you buy it now, or wait?",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && vite build && vite build --config vite.content.config.ts",
+    "build:fast": "vite build && vite build --config vite.content.config.ts",
+    "pack": "npm run build && node scripts/pack.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}
