@@ -3,7 +3,7 @@
   "name": "Wait2Play",
   "short_name": "Wait2Play",
   "version": "1.0.0",
-  "description": "Shows a 90-day Giveaway & Bundle Risk Score and a sale verdict on Steam, GOG, Epic, Humble, GG.deals, and IsThereAnyDeal.",
+  "description": "Shows a buy-or-wait verdict, giveaway and bundle risk score, and duplicate-purchase warnings on PC game store pages.",
   "homepage_url": "https://github.com/Deviloxide/Wait2Play",
   "icons": {
     "16": "icons/icon16.png",
