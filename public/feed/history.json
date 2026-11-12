@@ -1,6 +1,277 @@
 {
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-12",
   "records": [
+    {
+      "title": "Knightica",
+      "service": "epic",
+      "start": "2026-11-12"
+    },
+    {
+      "title": "Plantera 2: Golden Acorn",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Outpath",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Idle Waters",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Burgie's cozy kitchen",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Ropuka's Idle Island",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Cats Are Money",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Military Incremental Complex",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Kin and Quarry",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "How to Train Your Cock",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Aquaville",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "This Ain't Even Poker, Ya Joker",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Angel Clicker",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Budgie's Bug Shop",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "How to Grow Your Sausage",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Screen Stocks",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Focus Grove - DELUXE EDITION",
+      "service": "fanatical_bundle",
+      "start": "2026-11-12",
+      "note": "Build Your Own Idler Bundle (Fanatical)",
+      "end": "2026-12-26T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-idler-bundle"
+    },
+    {
+      "title": "Kriophobia",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "Coromon",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "Mail Time",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "Dream Tactics",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "Traveler's Refrain",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "Donna: The Canine Quest",
+      "service": "other",
+      "start": "2026-11-12",
+      "note": "Indie Quest - November Bundle (PlanetPlay)",
+      "url": "https://planetplay.com/gb/store/bundle/6af2f731bdeb63ae87e94399/"
+    },
+    {
+      "title": "My Lovely Daughter",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Three Kingdom: The Journey",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Dust to the End",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Murders on the Yangtze River",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Roulette Hero",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Ascend From Nine Mountains",
+      "service": "humble_bundle",
+      "start": "2026-11-10",
+      "note": "11.11 Singles Day: Celebration of Chinese Gaming! Bundle (Humble Bundle)",
+      "end": "2026-12-02T05:00:54.000Z",
+      "url": "https://www.humblebundle.com/games/1111-singles-day-celebration-chinese-gaming"
+    },
+    {
+      "title": "Skin Deep",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
+    {
+      "title": "Nightmare Reaper",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
+    {
+      "title": "Control Ultimate Edition",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
+    {
+      "title": "Severed Steel",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
+    {
+      "title": "Wanted: Dead",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
+    {
+      "title": "Beyond Sunset",
+      "service": "other",
+      "start": "2026-11-10",
+      "note": "Girls Just Wanna Have Guns! Bundle (GreenManGaming)",
+      "end": "2026-12-01T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/girls-just-wanna-have-guns-bundle/"
+    },
     {
       "title": "Do Not Feed the Monkeys",
       "service": "humble_bundle",
@@ -1638,70 +1909,6 @@
       "url": "https://www.indiegala.com/bundle/wicked-stardust-bundle"
     },
     {
-      "title": "Cris Tales",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Bramble: The Mountain King",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Afterimage",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Squirrel with a Gun",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Double Dragon Gaiden: Rise Of The Dragons",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Morbid: The Lords of Ire",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "How 2 Escape",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
-      "title": "Until Then",
-      "service": "humble_bundle",
-      "start": "2026-10-29",
-      "note": "Maximum Entertainment: Indie Hits Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:36.000Z",
-      "url": "https://www.humblebundle.com/games/maximum-entertainment-indie-hits"
-    },
-    {
       "title": "The Coma 2: Vicious Sisters",
       "service": "humble_bundle",
       "start": "2026-10-29",
@@ -2737,190 +2944,6 @@
       "note": "Build Your Own Legendary Bundle (Fall 2026) (Fanatical)",
       "end": "2026-11-26T08:00:00.000Z",
       "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-legendary-bundle"
-    },
-    {
-      "title": "Ghostrunner",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Ghostrunner 2",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Robocop Rogue City Collection",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Crysis Remastered",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Crysis 3 Remastered",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Crysis 2 Remastered",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Marathon",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Xenonauts 2",
-      "service": "humble_bundle",
-      "start": "2026-10-21",
-      "note": "Humble 15: Sci-fi Exposure Bundle (Humble Bundle)",
-      "end": "2026-11-12T05:00:25.000Z",
-      "url": "https://www.humblebundle.com/games/15th-anniversary-scifi-exposure"
-    },
-    {
-      "title": "Audio Trip",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "RAGER",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Out of Sight VR",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Genotype",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Surviving Mars: Pioneer",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Wrath: Aeon of Ruin VR - Brutal Edition",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Roboquest VR",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "VRacer Hoverbike",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "I AM YOUR BEAST VR",
-      "service": "humble_bundle",
-      "start": "2026-10-20",
-      "note": "Flat2VR Bundle (Humble Bundle)",
-      "end": "2026-11-11T05:00:19.000Z",
-      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
-    },
-    {
-      "title": "Robbie Swifthand and the Orb of Mysteries",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
-    },
-    {
-      "title": "Project Absentia",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
-    },
-    {
-      "title": "Symphonia",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
-    },
-    {
-      "title": "Strayed Lights",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
-    },
-    {
-      "title": "Nasty Zombies",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
-    },
-    {
-      "title": "Cat Detective Albert Wilde",
-      "service": "other",
-      "start": "2026-10-20",
-      "note": "Hidden Gems Bundle (GreenManGaming)",
-      "end": "2026-11-10T18:00:00.000Z",
-      "url": "https://www.greenmangamingbundles.com/bundles/hidden-gems-bundle/"
     },
     {
       "title": "Last Room",
