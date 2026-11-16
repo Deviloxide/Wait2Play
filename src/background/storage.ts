@@ -1,6 +1,6 @@
 import { extractLibraryEntries } from '../core/csv';
 import { dedupeHistory } from '../core/history';
-import { titlesMatch } from '../core/titles';
+import { normalizeTitle, titlesMatch } from '../core/titles';
 import { evaluateGameCompletion } from '../data/genres';
 import { SEED_HISTORY } from '../data/seedHistory';
 import {
@@ -15,6 +15,7 @@ import {
   type LibraryStats,
   type OwnedEntry,
   type Settings,
+  type WatchlistEntry,
 } from '../shared/types';
 import { fetchEpicFreeGames } from './api/epic';
 import { fetchGogSessionLibrary } from './api/gog';
@@ -29,6 +30,8 @@ const KEY_LIBRARIES = 'w2p:libraries';
 const KEY_STEAM_SYNC = 'w2p:steamSync';
 const KEY_GENRE_INDEX = 'w2p:genreIndex';
 const KEY_PLAY_TONIGHT = 'w2p:playTonight';
+const KEY_WATCHLIST = 'w2p:watchlist';
+const KEY_OVERRIDES = 'w2p:overrides';
 
 interface SteamSyncState {
   syncedAt: number;
@@ -42,9 +45,12 @@ interface SteamSyncState {
 
 export async function getSettings(): Promise<Settings> {
   const raw = (await chrome.storage.local.get(KEY_SETTINGS))[KEY_SETTINGS] as Partial<Settings> | undefined;
+  const legacyUrl = 'https://raw.githubusercontent.com/josephmate/EpicFreeGamesList/main/epic_free_games.json';
   return {
     ...DEFAULT_SETTINGS,
     ...raw,
+    historyUrl:
+      !raw?.historyUrl || raw.historyUrl === legacyUrl ? DEFAULT_SETTINGS.historyUrl : raw.historyUrl,
     sites: { ...DEFAULT_SETTINGS.sites, ...(raw?.sites ?? {}) },
     subscriptions: { ...DEFAULT_SETTINGS.subscriptions, ...(raw?.subscriptions ?? {}) },
   };
@@ -589,6 +595,110 @@ export async function setPlayTonightFlag(key: string, value: boolean): Promise<v
   if (value) map[key] = true;
   else delete map[key];
   await chrome.storage.local.set({ [KEY_PLAY_TONIGHT]: map });
+}
+
+export async function getWatchlist(): Promise<WatchlistEntry[]> {
+  return ((await chrome.storage.local.get(KEY_WATCHLIST))[KEY_WATCHLIST] as WatchlistEntry[] | undefined) ?? [];
+}
+
+export async function saveWatchlist(list: WatchlistEntry[]): Promise<void> {
+  await chrome.storage.local.set({ [KEY_WATCHLIST]: list });
+}
+
+export async function getWatchedEntry(
+  key: string,
+  steamAppId?: number | null,
+  title?: string,
+): Promise<WatchlistEntry | null> {
+  const list = await getWatchlist();
+  return (
+    list.find(
+      (w) =>
+        w.key === key ||
+        (steamAppId != null && w.steamAppId === steamAppId) ||
+        (title != null && titlesMatch(w.title, title)),
+    ) ?? null
+  );
+}
+
+export async function toggleWatchlistEntry(input: {
+  key: string;
+  title: string;
+  steamAppId?: number | null;
+  targetPrice: number | null;
+  currency?: string;
+}): Promise<WatchlistEntry | null> {
+  const list = await getWatchlist();
+  const idx = list.findIndex(
+    (w) =>
+      w.key === input.key ||
+      (input.steamAppId != null && w.steamAppId === input.steamAppId) ||
+      titlesMatch(w.title, input.title),
+  );
+  if (idx >= 0) {
+    list.splice(idx, 1);
+    await saveWatchlist(list);
+    return null;
+  }
+  const entry: WatchlistEntry = {
+    key: input.key,
+    title: input.title,
+    steamAppId: input.steamAppId ?? null,
+    targetPrice: input.targetPrice,
+    currency: input.currency ?? 'USD',
+    notifyOnFreeOrBundle: true,
+    addedAt: Date.now(),
+    triggered: null,
+  };
+  list.unshift(entry);
+  await saveWatchlist(list);
+  return entry;
+}
+
+export async function removeWatchlistEntry(key: string): Promise<WatchlistEntry[]> {
+  const list = (await getWatchlist()).filter((w) => w.key !== key);
+  await saveWatchlist(list);
+  return list;
+}
+
+export interface GameOverride {
+  title: string;
+  steamAppId?: number | null;
+}
+
+export async function getGameOverride(rawTitle: string): Promise<GameOverride | null> {
+  const norm = normalizeTitle(rawTitle);
+  if (!norm) return null;
+  const map = ((await chrome.storage.local.get(KEY_OVERRIDES))[KEY_OVERRIDES] as Record<string, GameOverride> | undefined) ?? {};
+  return map[norm] ?? null;
+}
+
+export async function setGameOverride(rawTitle: string, override: GameOverride): Promise<void> {
+  const norm = normalizeTitle(rawTitle);
+  if (!norm) return;
+  const map = ((await chrome.storage.local.get(KEY_OVERRIDES))[KEY_OVERRIDES] as Record<string, GameOverride> | undefined) ?? {};
+  map[norm] = override;
+  await chrome.storage.local.set({ [KEY_OVERRIDES]: map });
+}
+
+export async function clearGameOverride(rawTitle: string): Promise<void> {
+  const norm = normalizeTitle(rawTitle);
+  if (!norm) return;
+  const map = ((await chrome.storage.local.get(KEY_OVERRIDES))[KEY_OVERRIDES] as Record<string, GameOverride> | undefined) ?? {};
+  delete map[norm];
+  await chrome.storage.local.set({ [KEY_OVERRIDES]: map });
+}
+
+export async function isUserConfigured(): Promise<boolean> {
+  const [settings, librariesMap, steamSync] = await Promise.all([
+    getSettings(),
+    getLibrariesMap(),
+    chrome.storage.local.get(KEY_STEAM_SYNC).then((r) => r[KEY_STEAM_SYNC] as SteamSyncState | undefined),
+  ]);
+  if (steamSync && steamSync.games.length > 0) return true;
+  if (Object.values(librariesMap).some((arr) => (arr?.length ?? 0) > 0)) return true;
+  if (settings.subscriptions?.gamepass || settings.subscriptions?.psplus) return true;
+  return false;
 }
 
 export interface FullBackupPayload {

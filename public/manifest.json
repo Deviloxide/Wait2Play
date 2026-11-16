@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Wait2Play",
   "short_name": "Wait2Play",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Shows a buy-or-wait verdict, giveaway and bundle risk score, and duplicate-purchase warnings on PC game store pages.",
   "homepage_url": "https://github.com/Deviloxide/Wait2Play",
   "icons": {
@@ -54,7 +54,8 @@
         "https://store.steampowered.com/*",
         "https://www.gog.com/*",
         "https://store.epicgames.com/*",
-        "https://www.humblebundle.com/store*",
+        "https://www.humblebundle.com/*",
+        "https://www.fanatical.com/*",
         "https://gg.deals/*",
         "https://isthereanydeal.com/*"
       ],

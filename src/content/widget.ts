@@ -482,12 +482,19 @@ const STYLES = `
 }
 `;
 
+export function removeVerdictBadge(): void {
+  document.getElementById(HOST_ID)?.remove();
+  document.getElementById('wait2play-cart-guard')?.remove();
+}
+
 function ensureHost(anchor: { parent: Element; before: Node | null }): ShadowRoot {
   let host = document.getElementById(HOST_ID);
   if (!host) {
     host = document.createElement('div');
     host.id = HOST_ID;
     host.attachShadow({ mode: 'open' });
+    anchor.parent.insertBefore(host, anchor.before);
+  } else if (host.parentElement !== anchor.parent) {
     anchor.parent.insertBefore(host, anchor.before);
   }
   return host.shadowRoot!;
@@ -604,7 +611,15 @@ export function renderVerdictBadge(
           <span class="w2p-stat-value">${isConsole ? '—' : `${bundlePct}%`}</span>
         </div>
         <div class="w2p-stat-cell">
-          <span class="w2p-stat-label">Best Price</span>
+          <span class="w2p-stat-label">
+            Best Price${
+              result.facts.price.currentStore
+                ? result.facts.price.dealUrl
+                  ? ` · <a href="${escapeHtml(result.facts.price.dealUrl)}" target="_blank" rel="noopener noreferrer" style="color:var(--w2p-ink);text-decoration:none;font-weight:700">${escapeHtml(result.facts.price.currentStore)} ↗</a>`
+                  : ` · ${escapeHtml(result.facts.price.currentStore)}`
+                : ''
+            }
+          </span>
           <span class="w2p-stat-value">${escapeHtml(priceStr)}</span>
           ${lowStr ? `<span class="w2p-best-price-sub">${escapeHtml(lowStr)}</span>` : ''}
         </div>
@@ -653,8 +668,25 @@ export function renderVerdictBadge(
           : ''
       }
 
+      ${
+        result.needsOnboarding
+          ? `<div class="w2p-seasonal-hint" style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+              <span><b>Quick setup:</b> Sync Steam/GOG or pick Game Pass / PS Plus to unlock Duplicate Guard &amp; Backlog Tax.</span>
+              <button class="w2p-util-btn" id="w2p-onboard-btn" style="color:var(--w2p-ink);font-weight:700;white-space:nowrap">Open Settings ↗</button>
+            </div>`
+          : ''
+      }
+
       <div class="w2p-util-row">
         <div class="w2p-util-left">
+          <button class="w2p-util-btn" id="w2p-watch-btn" style="${result.watched ? 'color:#a4d007;font-weight:700' : ''}" title="Watch this game for price drops, live bundles, or free giveaways">
+            ${
+              result.watched
+                ? `★ Watching${result.watched.targetPrice != null ? ` (≤${fmt(result.watched.targetPrice)})` : ''}`
+                : '+ Watch alert'
+            }
+          </button>
+          <span style="color:var(--w2p-muted);opacity:0.4">·</span>
           <button class="w2p-util-btn" id="w2p-mark-owned-btn" title="Mark this game as already owned on Epic, GOG, Prime, or Steam">+ Mark owned</button>
           <span class="w2p-owned-picker" id="w2p-owned-picker">
             <button class="w2p-src-chip" data-src="epic">Epic</button>
@@ -666,8 +698,23 @@ export function renderVerdictBadge(
           </span>
           <span style="color:var(--w2p-muted);opacity:0.4">·</span>
           <button class="w2p-util-btn" id="w2p-copy-btn" title="Copy one-line Wait2Play summary to clipboard">Copy summary</button>
+          <span style="color:var(--w2p-muted);opacity:0.4">·</span>
+          <button class="w2p-util-btn" id="w2p-wrong-btn" title="Fix game match if Wait2Play matched the wrong edition or sequel">Wrong game?</button>
+          ${
+            result.overrideApplied
+              ? `<button class="w2p-util-btn" id="w2p-reset-override-btn" style="color:#ffb800" title="Clear manual game match override">(Reset match)</button>`
+              : ''
+          }
         </div>
         <div class="w2p-footer-links">${linksHtml}</div>
+      </div>
+
+      <div id="w2p-fix-box" hidden style="margin-top:8px;padding:8px 10px;background:var(--w2p-recessed);border:1px solid var(--w2p-grid);">
+        <div style="display:flex;gap:6px;align-items:center;">
+          <input id="w2p-fix-input" type="text" value="${escapeHtml(result.facts.title)}" placeholder="Search correct game title…" style="flex:1;min-width:0;background:#0b1016;color:#fff;border:1px solid var(--w2p-grid-strong);padding:4px 8px;font-size:12px;" />
+          <button id="w2p-fix-search-btn" class="w2p-expand-btn" style="padding:4px 10px;">Search</button>
+        </div>
+        <div id="w2p-fix-results" style="margin-top:6px;font-size:12px;"></div>
       </div>
 
       <div class="w2p-details" id="w2p-details">
@@ -743,6 +790,115 @@ export function renderVerdictBadge(
       }
     } catch {
       // ignore transient messaging error
+    }
+  });
+
+  const onboardBtn = root.getElementById('w2p-onboard-btn');
+  onboardBtn?.addEventListener('click', () => {
+    void send({ type: 'openOptions' }).catch(() => {});
+  });
+
+  const watchBtn = root.getElementById('w2p-watch-btn');
+  watchBtn?.addEventListener('click', async () => {
+    const defaultTarget =
+      result.facts.price.historicalLow ??
+      (result.facts.price.current != null ? Number((result.facts.price.current * 0.75).toFixed(2)) : null);
+    try {
+      const updated = await send({
+        type: 'toggleWatch',
+        key: result.key,
+        title: result.facts.title,
+        steamAppId: result.facts.steamAppId,
+        targetPrice: defaultTarget,
+        currency: result.facts.price.currency ?? 'USD',
+      });
+      if (updated) {
+        renderVerdictBadge(anchor, siteKey, updated);
+      }
+    } catch {
+      // ignore
+    }
+  });
+
+  const wrongBtn = root.getElementById('w2p-wrong-btn');
+  const fixBox = root.getElementById('w2p-fix-box') as HTMLDivElement | null;
+  const fixInput = root.getElementById('w2p-fix-input') as HTMLInputElement | null;
+  const fixSearchBtn = root.getElementById('w2p-fix-search-btn') as HTMLButtonElement | null;
+  const fixResults = root.getElementById('w2p-fix-results') as HTMLDivElement | null;
+
+  const runFixSearch = async () => {
+    const q = fixInput?.value.trim() ?? '';
+    if (!q || !fixResults) return;
+    fixResults.textContent = 'Searching…';
+    try {
+      const hits = await send({ type: 'search', query: q });
+      if (hits.length === 0) {
+        fixResults.textContent = 'No matches found.';
+        return;
+      }
+      fixResults.innerHTML = hits
+        .slice(0, 5)
+        .map(
+          (h, idx) =>
+            `<div data-hit-idx="${idx}" style="display:flex;justify-content:space-between;padding:4px 6px;cursor:pointer;border-bottom:1px solid rgba(102,192,244,0.1);">
+              <span style="color:#fff;font-weight:600">${escapeHtml(h.title)}${h.steamAppId ? ` <span style="color:var(--w2p-muted);font-weight:400">(Steam #${h.steamAppId})</span>` : ''}</span>
+              <span style="color:#a4d007">${h.cheapest != null ? `$${h.cheapest.toFixed(2)}` : 'Select →'}</span>
+            </div>`,
+        )
+        .join('');
+      fixResults.querySelectorAll<HTMLDivElement>('[data-hit-idx]').forEach((row) => {
+        row.addEventListener('click', async () => {
+          const hit = hits[Number(row.dataset.hitIdx)];
+          if (!hit) return;
+          const updated = await send({
+            type: 'setGameOverride',
+            rawTitle: document.title || result.facts.title,
+            override: { title: hit.title, steamAppId: hit.steamAppId },
+            currentQuery: {
+              steamAppId: hit.steamAppId ?? undefined,
+              title: hit.title,
+              pageCurrentPrice: result.facts.price.current,
+              pageHistoricalLow: result.facts.price.historicalLow,
+              pageCurrency: result.facts.price.currency,
+              platform: result.facts.platform,
+              platformLabel: result.facts.platformLabel,
+            },
+          });
+          if (updated) renderVerdictBadge(anchor, siteKey, updated);
+        });
+      });
+    } catch {
+      fixResults.textContent = 'Search failed.';
+    }
+  };
+
+  wrongBtn?.addEventListener('click', () => {
+    if (!fixBox) return;
+    fixBox.hidden = !fixBox.hidden;
+    if (!fixBox.hidden) {
+      fixInput?.focus();
+      void runFixSearch();
+    }
+  });
+  fixSearchBtn?.addEventListener('click', () => void runFixSearch());
+  fixInput?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      void runFixSearch();
+    }
+  });
+
+  const resetOverrideBtn = root.getElementById('w2p-reset-override-btn');
+  resetOverrideBtn?.addEventListener('click', async () => {
+    try {
+      const updated = await send({
+        type: 'clearGameOverride',
+        rawTitle: document.title || result.facts.title,
+        currentQuery: { title: result.facts.title },
+      });
+      if (updated) renderVerdictBadge(anchor, siteKey, updated);
+    } catch {
+      // ignore
     }
   });
 }

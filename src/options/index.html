@@ -19,6 +19,20 @@
         <div id="status-toast" class="toast" hidden></div>
       </header>
 
+      <div id="welcome-banner" class="info-box" hidden style="margin-bottom: 16px; border-left: 4px solid #a4d007; background: #101720;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+          <div>
+            <b style="color:#a4d007;font-size:14px;">Welcome to Wait2Play — Quick 30-Second Setup</b>
+            <p class="muted" style="margin:6px 0 0;">
+              1. Click <b>One-Click Sync</b> below for Steam (and GOG if you use it) while signed into those websites in this browser.<br />
+              2. Check <b>PC / Xbox Game Pass</b> or <b>PlayStation Plus Extra</b> in Card 4 if you subscribe to either.<br />
+              3. Open any game page on Steam, GOG, Epic, Humble, GG.deals, or IsThereAnyDeal to see your live Wait2Play card.
+            </p>
+          </div>
+          <button id="dismiss-welcome-btn" class="btn" type="button">Dismiss</button>
+        </div>
+      </div>
+
       <div class="grid">
         <!-- 1. Multi-Launcher Duplicate Guard -->
         <section class="card">
@@ -32,9 +46,10 @@
             <button id="sync-gog-btn" class="btn primary">One-Click Sync GOG Library (logged-in session)</button>
           </div>
           <p class="muted" style="font-size: 11.5px">
-            Epic's library can't be read from your browser session, so export it with
-            <a href="https://github.com/derrod/legendary" target="_blank" rel="noopener noreferrer">Legendary</a>
-            (<code>legendary list --csv</code>) or Playnite and import it below.
+            <b>Epic Games Store tip:</b> Open your
+            <a href="https://www.epicgames.com/account/transactions" target="_blank" rel="noopener noreferrer">Epic Transactions page ↗</a>,
+            press <code>Ctrl+A</code> then <code>Ctrl+C</code>, and paste into the box below — Wait2Play automatically strips dates, prices, and order IDs.
+            You can also drop a JSON/CSV export from Heroic, Legendary, or Playnite.
           </p>
 
           <div class="row">
@@ -51,13 +66,13 @@
               </select>
             </label>
             <div class="field-group">
-              <span class="field-label">CSV / TXT File</span>
+              <span class="field-label">CSV / JSON / TXT File</span>
               <label class="dropzone" id="csv-dropzone">
-                <input type="file" id="csv-file" accept=".csv,.txt,.tsv" hidden />
+                <input type="file" id="csv-file" accept=".csv,.txt,.tsv,.json" hidden />
                 <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M8 11V3M4.5 6.5L8 3l3.5 3.5M2.5 13h11" />
                 </svg>
-                <span id="csv-drop-label">Click or drag CSV / TXT here</span>
+                <span id="csv-drop-label">Click or drag CSV / JSON / TXT here</span>
               </label>
             </div>
           </div>
@@ -188,7 +203,7 @@
             </label>
             <label class="check-row">
               <input type="checkbox" id="site-humble" checked />
-              <span>Humble Store (<code>humblebundle.com/store</code>)</span>
+              <span>Humble &amp; Fanatical (<code>humblebundle.com</code>, <code>fanatical.com</code>)</span>
             </label>
             <label class="check-row">
               <input type="checkbox" id="site-ggdeals" checked />
@@ -211,6 +226,10 @@
             <label class="check-row">
               <input type="checkbox" id="sub-psplus" />
               <span>PlayStation Plus Extra</span>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" id="notify-alerts" checked />
+              <span>Toolbar alert badge for watched price drops &amp; freebies</span>
             </label>
           </div>
 

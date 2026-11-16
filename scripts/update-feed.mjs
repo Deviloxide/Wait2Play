@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 /**
@@ -41,6 +41,17 @@ function addRecord(rec) {
 }
 
 for (const r of baseRecords) addRecord(r);
+
+// Preserve any previously accumulated records in public/feed/history.json
+if (existsSync(feedPath)) {
+  try {
+    const prev = JSON.parse(readFileSync(feedPath, 'utf8'));
+    const prevList = Array.isArray(prev) ? prev : Array.isArray(prev?.records) ? prev.records : [];
+    for (const r of prevList) addRecord(r);
+  } catch {
+    // ignore malformed existing feed
+  }
+}
 
 // 1. Fetch josephmate/EpicFreeGamesList
 try {

@@ -2,7 +2,13 @@ import { describe, expect, it } from 'vitest';
 import { parseEpicFreeGames } from '../src/background/api/epic';
 import { parseItadBundlesRss } from '../src/background/api/itad';
 import { coerceHistoryRecord } from '../src/background/storage';
-import { parsePriceWithCurrency } from '../src/content/detectors';
+import {
+  isFanaticalBundlePage,
+  isHumbleBundlePage,
+  isSteamBundlePage,
+  isSteamSearchOrSalePage,
+} from '../src/content/cartGuard';
+import { extractGogPrice, parsePriceWithCurrency } from '../src/content/detectors';
 import { computeBacklogTax } from '../src/core/backlog';
 import { extractLibraryEntries } from '../src/core/csv';
 import { evaluate } from '../src/core/scoring';
@@ -491,6 +497,59 @@ describe('5 Predictive Signals & Verdict Engine', () => {
       subscriptions: { gamepass: false, psplus: false },
     });
     expect(withoutGamePass.verdict).not.toBe('IN_SUBSCRIPTION');
+  });
+
+  it('parses non-USD and USD GOG prices without forcing USD symbol', () => {
+    expect(extractGogPrice('14.79', '€14.79', 'USD')).toEqual({ value: 14.79, currency: 'EUR' });
+    expect(extractGogPrice('59.99', '59,99 zł', 'USD')).toEqual({ value: 59.99, currency: 'PLN' });
+    expect(extractGogPrice('14.99', '14.99', 'GBP')).toEqual({ value: 14.99, currency: 'GBP' });
+    expect(extractGogPrice('14.99', '$14.99', 'USD')).toEqual({ value: 14.99, currency: 'USD' });
+  });
+
+  it('extracts Epic games from copy-pasted Epic Transactions text and Legendary/Heroic JSON exports', () => {
+    const pastedTx = [
+      'Transactions',
+      'Date',
+      'Description',
+      'Price',
+      'Status',
+      '11/14/2026',
+      'Subnautica',
+      '$0.00',
+      'Purchased',
+      'F240101998877',
+      '10/31/2026\tAlan Wake 2\t$24.99\tPurchased',
+      'Show More',
+    ].join('\n');
+
+    const resTx = extractLibraryEntries(pastedTx, 'epic');
+    expect(resTx.entries.map((e) => e.title)).toEqual(['Subnautica', 'Alan Wake 2']);
+
+    const legendaryJson = JSON.stringify({
+      Sugar: { app_title: 'Rocket League', is_dlc: false },
+      SomeDlc: { app_title: 'Rocket League DLC Pack', is_dlc: true },
+    });
+    const resJson = extractLibraryEntries(legendaryJson, 'epic');
+    expect(resJson.entries.map((e) => e.title)).toEqual(['Rocket League']);
+  });
+
+  it('detects Humble Bundle / Choice pages and Steam Search / Sale pages', () => {
+    expect(isHumbleBundlePage('https://www.humblebundle.com/games/seriously-unserious-collection')).toBe(true);
+    expect(isHumbleBundlePage('https://www.humblebundle.com/membership/home')).toBe(true);
+    expect(isHumbleBundlePage('https://www.humblebundle.com/store/hollow-knight')).toBe(false);
+
+    expect(isFanaticalBundlePage('https://www.fanatical.com/en/bundle/movember-charity-bundle-2026')).toBe(true);
+    expect(isFanaticalBundlePage('https://www.fanatical.com/en/pick-and-mix/build-your-own-platinum-collection')).toBe(
+      true,
+    );
+    expect(isHumbleBundlePage('https://www.fanatical.com/en/bundle/movember-charity-bundle-2026')).toBe(true);
+
+    expect(isSteamBundlePage('https://store.steampowered.com/bundle/234/Portal_Bundle/')).toBe(true);
+    expect(isSteamBundlePage('https://store.steampowered.com/sub/12345/')).toBe(true);
+
+    expect(isSteamSearchOrSalePage('https://store.steampowered.com/search/?term=hades')).toBe(true);
+    expect(isSteamSearchOrSalePage('https://store.steampowered.com/specials')).toBe(true);
+    expect(isSteamSearchOrSalePage('https://store.steampowered.com/app/1145360/Hades/')).toBe(false);
   });
 });
 

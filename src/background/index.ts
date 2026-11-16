@@ -1,37 +1,47 @@
 import { liveGiveaway } from '../core/history';
 import { evaluate } from '../core/scoring';
 import { activeWindows, nextEpicDrop, nextHumbleChoice, upcomingWindows } from '../core/seasonal';
+import { titlesMatch } from '../core/titles';
 import type { Request, Response, ResponseMap } from '../shared/messages';
-import type { GameQuery, SeasonalOverview, Verdict, VerdictResult } from '../shared/types';
+import type { ActiveBundleInfo, GameQuery, SeasonalOverview, Verdict, VerdictResult } from '../shared/types';
 import { fetchActiveBundlesOverview } from './api/itad';
 import { assembleGameFacts, searchGames } from './assembler';
 import { clearCache, pruneCache } from './cache';
 import {
+  clearGameOverride,
   clearLibrary,
   exportFullBackup,
   exportHistoryJson,
   fetchHistoryFromUrl,
   findOwnedMatches,
   getBacklogInput,
+  getGameOverride,
   getHistory,
   getHistoryStats,
   getLibraryStats,
   getPlayTonight,
   getSettings,
+  getWatchedEntry,
+  getWatchlist,
   getWishlistTitles,
   importFullBackup,
   importHistoryJson,
   importLibraryCsv,
   indexSomeSteamGenres,
   isGameWishlisted,
+  isUserConfigured,
   markGameOwned,
   refreshCommunityFeedIfConfigured,
   refreshEpicHistory,
+  removeWatchlistEntry,
   saveSettings,
+  saveWatchlist,
+  setGameOverride,
   setPlayTonightFlag,
   syncSteamLibrary,
   syncGogSessionLibrary,
   syncSteamSessionLibrary,
+  toggleWatchlistEntry,
 } from './storage';
 
 const CHEAPSHARK_UA_RULE_ID = 1;
@@ -104,19 +114,48 @@ async function updateTabBadge(
 }
 
 const lastEvaluatedByKey = new Map<string, GameQuery>();
+const pageObservedBundles: Array<{ bundle: ActiveBundleInfo; games: string[]; observedAt: number }> = [];
 
 async function evaluateGame(query: GameQuery): Promise<VerdictResult | null> {
-  const facts = await assembleGameFacts(query);
+  let effectiveQuery = query;
+  let overrideApplied = false;
+  if (query.title) {
+    const ov = await getGameOverride(query.title);
+    if (ov) {
+      effectiveQuery = {
+        ...query,
+        title: ov.title,
+        steamAppId: ov.steamAppId ?? query.steamAppId,
+      };
+      overrideApplied = true;
+    }
+  }
+
+  const facts = await assembleGameFacts(effectiveQuery);
   if (!facts) return null;
-  const [history, owned, settings, backlog, wishlisted] = await Promise.all([
+
+  // Merge any live bundles directly observed on Humble Bundle pages during this session
+  for (const obs of pageObservedBundles) {
+    if (obs.games.some((g) => titlesMatch(g, facts.title))) {
+      const existing = facts.liveBundles ?? [];
+      if (!existing.some((b) => titlesMatch(b.title, obs.bundle.title))) {
+        facts.liveBundles = [obs.bundle, ...existing];
+      }
+    }
+  }
+  const [history, owned, settings, backlog, wishlisted, configured] = await Promise.all([
     getHistory(),
     findOwnedMatches(facts),
     getSettings(),
     getBacklogInput(),
     isGameWishlisted(facts.steamAppId, facts.title),
+    isUserConfigured(),
   ]);
   const key = facts.steamAppId ? `steam:${facts.steamAppId}` : `t:${facts.title.toLowerCase()}`;
-  const playTonight = await getPlayTonight(key);
+  const [playTonight, watched] = await Promise.all([
+    getPlayTonight(key),
+    getWatchedEntry(key, facts.steamAppId, facts.title),
+  ]);
   const res = evaluate(facts, {
     now: Date.now(),
     history,
@@ -127,6 +166,42 @@ async function evaluateGame(query: GameQuery): Promise<VerdictResult | null> {
     subscriptions: settings.subscriptions,
   });
   res.wishlisted = wishlisted;
+  res.needsOnboarding = !configured;
+  res.overrideApplied = overrideApplied;
+
+  if (watched) {
+    const liveBundle = facts.liveBundles?.[0];
+    let triggered = watched.triggered ?? null;
+    if (res.verdict === 'FREE_NOW') {
+      triggered = {
+        reason: 'Free to claim right now!',
+        url: res.liveFreebie?.record.url ?? facts.price.dealUrl,
+        price: 0,
+        triggeredAt: Date.now(),
+      };
+    } else if (liveBundle && watched.notifyOnFreeOrBundle) {
+      triggered = {
+        reason: `In live bundle: ${liveBundle.title} (${liveBundle.store})`,
+        url: liveBundle.url,
+        price: liveBundle.price ?? null,
+        triggeredAt: Date.now(),
+      };
+    } else if (
+      watched.targetPrice != null &&
+      facts.price.current != null &&
+      facts.price.current <= watched.targetPrice
+    ) {
+      triggered = {
+        reason: `Hit target price (${facts.price.currencySymbol ?? '$'}${facts.price.current.toFixed(2)} ≤ ${facts.price.currencySymbol ?? '$'}${watched.targetPrice.toFixed(2)})`,
+        url: facts.price.dealUrl,
+        price: facts.price.current,
+        triggeredAt: Date.now(),
+      };
+    }
+    watched.triggered = triggered;
+    res.watched = watched;
+  }
+
   lastEvaluatedByKey.set(res.key, {
     steamAppId: facts.steamAppId ?? undefined,
     title: facts.title,
@@ -139,9 +214,57 @@ async function evaluateGame(query: GameQuery): Promise<VerdictResult | null> {
   return res;
 }
 
+async function checkWatchlistAlerts(): Promise<void> {
+  const list = await getWatchlist();
+  if (list.length === 0) return;
+  let changed = false;
+  for (const item of list.slice(0, 8)) {
+    try {
+      const res = await evaluateGame({
+        steamAppId: item.steamAppId ?? undefined,
+        title: item.title,
+      });
+      if (res?.watched && JSON.stringify(res.watched.triggered) !== JSON.stringify(item.triggered)) {
+        item.triggered = res.watched.triggered;
+        changed = true;
+      }
+    } catch {
+      // ignore individual failure
+    }
+  }
+  if (changed) {
+    await saveWatchlist(list);
+  }
+  await updateGlobalAlertBadge(list);
+}
+
+async function updateGlobalAlertBadge(watchlist?: Awaited<ReturnType<typeof getWatchlist>>): Promise<void> {
+  try {
+    const settings = await getSettings();
+    if (settings.notifyAlerts === false) {
+      await chrome.action.setBadgeText({ text: '' });
+      return;
+    }
+    const list = watchlist ?? (await getWatchlist());
+    const triggeredCount = list.filter((w) => !!w.triggered).length;
+    if (triggeredCount > 0) {
+      await chrome.action.setBadgeText({ text: `!${triggeredCount}` });
+      await chrome.action.setBadgeBackgroundColor({ color: '#a4d007' });
+    } else {
+      await chrome.action.setBadgeText({ text: '' });
+    }
+  } catch {
+    // ignore
+  }
+}
+
 async function buildSeasonalOverview(): Promise<SeasonalOverview> {
   const now = Date.now();
-  const [history, wishlistTitles] = await Promise.all([getHistory(), getWishlistTitles()]);
+  const [history, wishlistTitles, watchlist] = await Promise.all([
+    getHistory(),
+    getWishlistTitles(),
+    getWatchlist(),
+  ]);
   const [liveBundles] = await Promise.all([
     fetchActiveBundlesOverview(wishlistTitles, 4).catch(() => []),
   ]);
@@ -160,6 +283,7 @@ async function buildSeasonalOverview(): Promise<SeasonalOverview> {
     nextHumbleChoice: nextHumbleChoice(now),
     liveEpic: liveEpic.slice(0, 6),
     liveBundles,
+    watchlist,
   };
 }
 
@@ -187,6 +311,53 @@ async function handleRequest(req: Request, sender: chrome.runtime.MessageSender)
         lastEvaluatedByKey.get(req.key) ??
         (req.steamAppId ? { steamAppId: req.steamAppId, title: req.title } : { title: req.title });
       return evaluateGame(q);
+    }
+    case 'toggleWatch': {
+      await toggleWatchlistEntry({
+        key: req.key,
+        title: req.title,
+        steamAppId: req.steamAppId,
+        targetPrice: req.targetPrice,
+        currency: req.currency,
+      });
+      const q =
+        lastEvaluatedByKey.get(req.key) ??
+        (req.steamAppId ? { steamAppId: req.steamAppId, title: req.title } : { title: req.title });
+      const res = await evaluateGame(q);
+      void updateGlobalAlertBadge();
+      return res;
+    }
+    case 'removeWatch': {
+      const next = await removeWatchlistEntry(req.key);
+      void updateGlobalAlertBadge(next);
+      return next;
+    }
+    case 'setGameOverride': {
+      await setGameOverride(req.rawTitle, req.override);
+      return evaluateGame(req.currentQuery);
+    }
+    case 'clearGameOverride': {
+      await clearGameOverride(req.rawTitle);
+      return evaluateGame(req.currentQuery);
+    }
+    case 'recordLiveBundle': {
+      const idx = pageObservedBundles.findIndex((x) => x.bundle.url === req.bundleUrl);
+      const entry = {
+        bundle: {
+          title: req.bundleTitle,
+          store: req.store,
+          price: req.price,
+          currency: 'USD',
+          url: req.bundleUrl,
+          expiry: null,
+          gamesCount: req.games.length,
+        },
+        games: req.games,
+        observedAt: Date.now(),
+      };
+      if (idx >= 0) pageObservedBundles[idx] = entry;
+      else pageObservedBundles.unshift(entry);
+      return true;
     }
     case 'getSeasonal':
       return buildSeasonalOverview();
@@ -223,18 +394,24 @@ async function handleRequest(req: Request, sender: chrome.runtime.MessageSender)
     case 'setBadge':
       await updateTabBadge(sender.tab?.id, req.verdict, req.freebieProbability);
       return true;
+    case 'openOptions':
+      await chrome.runtime.openOptionsPage();
+      return true;
     case 'clearCache':
       await clearCache();
       return true;
   }
 }
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   void ensureCheapSharkUserAgentRule();
   void refreshEpicHistory().catch(() => {});
   void refreshCommunityFeedIfConfigured().catch(() => {});
   chrome.alarms.create(ALARM_EPIC, { periodInMinutes: 360 });
   chrome.alarms.create(ALARM_MAINTENANCE, { periodInMinutes: 60 });
+  if (details.reason === 'install') {
+    void chrome.tabs.create({ url: chrome.runtime.getURL('options/index.html?welcome=1') }).catch(() => {});
+  }
 });
 
 chrome.runtime.onStartup.addListener(() => {
@@ -247,6 +424,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === ALARM_EPIC) {
     void refreshEpicHistory().catch(() => {});
     void refreshCommunityFeedIfConfigured().catch(() => {});
+    void checkWatchlistAlerts().catch(() => {});
   } else if (alarm.name === ALARM_MAINTENANCE) {
     void pruneCache().catch(() => {});
     void indexSomeSteamGenres(15).catch(() => {});

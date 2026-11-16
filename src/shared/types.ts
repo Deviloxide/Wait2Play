@@ -220,6 +220,22 @@ export interface Link {
   url: string;
 }
 
+export interface WatchlistEntry {
+  key: string;
+  title: string;
+  steamAppId?: number | null;
+  targetPrice: number | null;
+  currency?: string;
+  notifyOnFreeOrBundle: boolean;
+  addedAt: number;
+  triggered?: {
+    reason: string;
+    url?: string | null;
+    price?: number | null;
+    triggeredAt: number;
+  } | null;
+}
+
 export interface VerdictResult {
   key: string;
   facts: GameFacts;
@@ -233,6 +249,9 @@ export interface VerdictResult {
   playTonightNote: string | null;
   owned: OwnedEntry[];
   wishlisted?: boolean;
+  watched?: WatchlistEntry | null;
+  needsOnboarding?: boolean;
+  overrideApplied?: boolean;
   priorAppearances: HistoryRecord[];
   liveFreebie: { record: HistoryRecord; status: 'current' | 'upcoming' } | null;
   seasonal: SeasonalWindow[];
@@ -270,10 +289,11 @@ export interface Settings {
   historyUrl: string;
   giveawayThreshold: number;
   bundleThreshold: number;
+  notifyAlerts?: boolean;
 }
 
 export const DEFAULT_COMMUNITY_FEED_URL =
-  'https://raw.githubusercontent.com/josephmate/EpicFreeGamesList/main/epic_free_games.json';
+  'https://raw.githubusercontent.com/Deviloxide/Wait2Play/main/public/feed/history.json';
 
 export const DEFAULT_SETTINGS: Settings = {
   steamApiKey: '',
@@ -285,6 +305,7 @@ export const DEFAULT_SETTINGS: Settings = {
   historyUrl: DEFAULT_COMMUNITY_FEED_URL,
   giveawayThreshold: 0.35,
   bundleThreshold: 0.4,
+  notifyAlerts: true,
 };
 
 export interface LibraryStats {
@@ -326,4 +347,5 @@ export interface SeasonalOverview {
   nextHumbleChoice: number;
   liveEpic: { record: HistoryRecord; status: 'current' | 'upcoming'; wishlisted?: boolean }[];
   liveBundles?: LiveBundleOverviewItem[];
+  watchlist?: WatchlistEntry[];
 }

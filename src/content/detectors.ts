@@ -192,6 +192,23 @@ function appendInsideFirst(selectors: string[]): { parent: Element; before: Node
   return null;
 }
 
+export function extractGogPrice(
+  finalAmountText: string | null | undefined,
+  containerText: string | null | undefined,
+  fallbackCurrency = 'USD',
+): ParsedPrice | null {
+  const fromContainer = parsePriceWithCurrency(containerText);
+  if (fromContainer) return fromContainer;
+  const raw = (finalAmountText ?? '').trim();
+  if (!raw) return null;
+  const direct = parsePriceWithCurrency(raw);
+  if (direct) return direct;
+  const numeric = Number(raw.replace(',', '.'));
+  if (!Number.isFinite(numeric) || numeric < 0) return null;
+  const cur = fallbackCurrency.toUpperCase();
+  return { value: numeric, currency: cur in CURRENCY_SYMBOLS ? cur : 'USD' };
+}
+
 export function detectCurrentPage(url = location.href): DetectedSite | null {
   const u = new URL(url);
   const host = u.hostname.replace(/^www\./, '');
@@ -216,22 +233,34 @@ export function detectCurrentPage(url = location.href): DetectedSite | null {
   // 2. Humble Store product page: https://www.humblebundle.com/store/<slug>
   if (host === 'humblebundle.com' && u.pathname.startsWith('/store/') && u.pathname.length > '/store/'.length) {
     if (u.pathname.startsWith('/store/search') || u.pathname.startsWith('/store/promo')) return null;
-    const h1 = document.querySelector('h1.human_name-view, h1[data-azan-name], h1');
+    const h1 = document.querySelector('h1.human_name-view, h1[data-azan-name], #main-content h2, main h2, h1');
     const og = document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.content;
     const title = cleanStoreTitle(h1?.textContent?.trim() || og || document.title);
     if (!title) return null;
-    const { pageCurrentPrice, pageHistoricalLow, pageCurrency } = scrapeHostPrices();
+    const scraped = scrapeHostPrices();
+    const humblePriceEl = document.querySelector('[data-testid="product-price"]');
+    const humblePrice = parsePriceWithCurrency(
+      humblePriceEl?.getAttribute('aria-label') || humblePriceEl?.textContent,
+    );
+    const pageCurrentPrice = humblePrice?.value ?? scraped.pageCurrentPrice;
+    const pageCurrency = humblePrice?.currency ?? scraped.pageCurrency;
+    const pageHistoricalLow =
+      scraped.pageHistoricalLow != null && pageCurrency === scraped.pageCurrency
+        ? scraped.pageHistoricalLow
+        : null;
     const { platform, platformLabel } = detectConsolePlatform(u);
     return {
       siteKey: 'humble',
       query: { title, pageCurrentPrice, pageHistoricalLow, pageCurrency, platform, platformLabel },
       findAnchor: () =>
+        appendInsideFirst(['[data-testid="pdp-media-column"]']) ??
         insertBeforeFirst([
           '.js-Showcase-sidebar .pricing-info-view',
           '.pricing-info-view',
           '.platform-pricing-details',
           '.showcase-info-section',
-        ]) ?? appendInsideFirst(['.js-Showcase-sidebar', 'main', 'body']),
+        ]) ??
+        appendInsideFirst(['.js-Showcase-sidebar', '#main-content', 'main', 'body']),
     };
   }
 
@@ -281,18 +310,23 @@ export function detectCurrentPage(url = location.href): DetectedSite | null {
     const title = cleanStoreTitle(h1?.textContent?.trim() || og || document.title);
     if (!title) return null;
     const scraped = scrapeHostPrices();
-    const gogPrice = parsePriceWithCurrency(
-      `$${document.querySelector('.product-actions-price__final-amount')?.textContent?.trim() ?? ''}`,
+    const gogPrice = extractGogPrice(
+      document.querySelector('.product-actions-price__final-amount')?.textContent,
+      document.querySelector('.product-actions-price')?.textContent,
+      scraped.pageCurrency,
     );
-    const hasGogPrice = !!document.querySelector('.product-actions-price__final-amount') && gogPrice != null;
-    const pageCurrentPrice = hasGogPrice ? gogPrice!.value : scraped.pageCurrentPrice;
-    const { pageHistoricalLow, pageCurrency } = scraped;
+    const pageCurrentPrice = gogPrice?.value ?? scraped.pageCurrentPrice;
+    const pageCurrency = gogPrice?.currency ?? scraped.pageCurrency;
+    const pageHistoricalLow =
+      scraped.pageHistoricalLow != null && pageCurrency === scraped.pageCurrency
+        ? scraped.pageHistoricalLow
+        : null;
     return {
       siteKey: 'gog',
       query: { title, pageCurrentPrice, pageHistoricalLow, pageCurrency, platform: 'pc' },
       findAnchor: () =>
-        insertBeforeFirst(['.product-actions', '.productcard-player', '.layout-side-col']) ??
-        appendInsideFirst(['.productcard-basics', 'main', 'body']),
+        insertBeforeFirst(['.layout-main-col .content-summary-section', '.content-summary-section']) ??
+        appendInsideFirst(['.layout-main-col', '.layout-side-col', 'main', 'body']),
     };
   }
 

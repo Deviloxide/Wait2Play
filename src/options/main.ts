@@ -83,7 +83,13 @@ syncGogBtn.addEventListener('click', async () => {
     notify(`Synced ${res.count} owned GOG games from your browser session.`);
     await refreshLibraryStats();
   } catch (err) {
-    notify(err instanceof Error ? err.message : String(err), true);
+    const msg = err instanceof Error ? err.message : String(err);
+    notify(msg, true);
+    if (/signed in/i.test(msg)) {
+      libraryStatsEl.innerHTML =
+        `<span class="muted">Not signed into <a href="https://www.gog.com/" target="_blank" rel="noopener noreferrer">gog.com ↗</a> in this browser. Sign in there in a tab, then click Sync again.</span>` +
+        (libraryStatsEl.innerHTML.includes('No libraries imported yet') ? '' : ` ${libraryStatsEl.innerHTML}`);
+    }
   } finally {
     syncGogBtn.disabled = false;
     syncGogBtn.textContent = 'One-Click Sync GOG Library (logged-in session)';
@@ -172,7 +178,13 @@ syncSteamSessionBtn.addEventListener('click', async () => {
     notify(`Synced ${res.count} owned Steam games (${res.wishlistCount} wishlisted) from your browser session!`);
     await refreshLibraryStats();
   } catch (err) {
-    notify(err instanceof Error ? err.message : String(err), true);
+    const msg = err instanceof Error ? err.message : String(err);
+    notify(msg, true);
+    if (/signed in|logged in|session/i.test(msg)) {
+      const syncStatus = document.getElementById('steam-sync-status') as HTMLDivElement;
+      syncStatus.innerHTML =
+        `Not signed into Steam in this browser. <a href="https://store.steampowered.com/login/" target="_blank" rel="noopener noreferrer">Sign in at store.steampowered.com ↗</a> in a browser tab (the desktop client alone isn't shared with Chrome), then click Sync again.`;
+    }
   } finally {
     syncSteamSessionBtn.disabled = false;
     syncSteamSessionBtn.textContent = 'One-Click Sync from Logged-in Steam Session';
@@ -188,7 +200,13 @@ syncSteamBtn.addEventListener('click', async () => {
     notify(`Synced ${res.count} Steam games (${res.unplayed} unplayed) via Web API.`);
     await refreshLibraryStats();
   } catch (err) {
-    notify(err instanceof Error ? err.message : String(err), true);
+    const msg = err instanceof Error ? err.message : String(err);
+    notify(msg, true);
+    if (/signed in|logged in|session/i.test(msg)) {
+      const syncStatus = document.getElementById('steam-sync-status') as HTMLDivElement;
+      syncStatus.innerHTML =
+        `Not signed into Steam in this browser. <a href="https://store.steampowered.com/login/" target="_blank" rel="noopener noreferrer">Sign in at store.steampowered.com ↗</a> in a browser tab (the desktop client alone isn't shared with Chrome), then click Sync again.`;
+    }
   } finally {
     syncSteamBtn.disabled = false;
     syncSteamBtn.textContent = 'Sync via Web API Key';
@@ -285,6 +303,7 @@ const siteGgdeals = document.getElementById('site-ggdeals') as HTMLInputElement;
 const siteItad = document.getElementById('site-itad') as HTMLInputElement;
 const subGamepass = document.getElementById('sub-gamepass') as HTMLInputElement;
 const subPsplus = document.getElementById('sub-psplus') as HTMLInputElement;
+const notifyAlerts = document.getElementById('notify-alerts') as HTMLInputElement;
 const threshGiveaway = document.getElementById('thresh-giveaway') as HTMLInputElement;
 const threshBundle = document.getElementById('thresh-bundle') as HTMLInputElement;
 const savePrefsBtn = document.getElementById('save-prefs-btn') as HTMLButtonElement;
@@ -309,6 +328,7 @@ savePrefsBtn.addEventListener('click', async () => {
           gamepass: subGamepass.checked,
           psplus: subPsplus.checked,
         },
+        notifyAlerts: notifyAlerts.checked,
         giveawayThreshold: Math.min(0.9, Math.max(0.1, (Number(threshGiveaway.value) || 35) / 100)),
         bundleThreshold: Math.min(0.9, Math.max(0.1, (Number(threshBundle.value) || 40) / 100)),
       },
@@ -352,6 +372,15 @@ importBackupFile.addEventListener('change', async () => {
 });
 
 async function init(): Promise<void> {
+  const welcomeBanner = document.getElementById('welcome-banner') as HTMLDivElement | null;
+  const dismissWelcomeBtn = document.getElementById('dismiss-welcome-btn') as HTMLButtonElement | null;
+  if (welcomeBanner && new URLSearchParams(location.search).get('welcome') === '1') {
+    welcomeBanner.hidden = false;
+    dismissWelcomeBtn?.addEventListener('click', () => {
+      welcomeBanner.hidden = true;
+    });
+  }
+
   const s = await send({ type: 'getSettings' });
   steamKeyInput.value = s.steamApiKey;
   steamIdInput.value = s.steamId;
@@ -366,6 +395,7 @@ async function init(): Promise<void> {
   siteItad.checked = s.sites.itad;
   subGamepass.checked = !!s.subscriptions?.gamepass;
   subPsplus.checked = !!s.subscriptions?.psplus;
+  notifyAlerts.checked = s.notifyAlerts !== false;
   threshGiveaway.value = String(Math.round(s.giveawayThreshold * 100));
   threshBundle.value = String(Math.round(s.bundleThreshold * 100));
 

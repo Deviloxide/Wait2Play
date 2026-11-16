@@ -116,7 +116,15 @@ function renderVerdict(res: VerdictResult): void {
           <span class="w2p-stat-value">${isConsole ? '—' : `${bundlePct}%`}</span>
         </div>
         <div class="w2p-stat-cell">
-          <span class="w2p-stat-label">Best Price</span>
+          <span class="w2p-stat-label">
+            Best Price${
+              res.facts.price.currentStore
+                ? res.facts.price.dealUrl
+                  ? ` · <a href="${escapeHtml(res.facts.price.dealUrl)}" target="_blank" rel="noopener noreferrer" style="color:#66c0f4;text-decoration:none;font-weight:700">${escapeHtml(res.facts.price.currentStore)} ↗</a>`
+                  : ` · ${escapeHtml(res.facts.price.currentStore)}`
+                : ''
+            }
+          </span>
           <span class="w2p-stat-value">${escapeHtml(priceStr)}</span>
           <span class="w2p-best-price-sub">${escapeHtml(lowStr)}</span>
         </div>
@@ -161,6 +169,14 @@ function renderVerdict(res: VerdictResult): void {
 
       <div class="util-row">
         <div class="util-left">
+          <button class="util-btn" id="popup-watch-btn" style="${res.watched ? 'color:#a4d007;font-weight:700' : ''}">
+            ${
+              res.watched
+                ? `★ Watching${res.watched.targetPrice != null ? ` (≤${fmt(res.watched.targetPrice)})` : ''}`
+                : '+ Watch alert'
+            }
+          </button>
+          <span style="color:#8f98a0;opacity:0.4">·</span>
           <button class="util-btn" id="popup-mark-owned-btn">+ Mark owned</button>
           <span class="owned-picker" id="popup-owned-picker">
             <button class="src-chip" data-src="epic">Epic</button>
@@ -182,6 +198,23 @@ function renderVerdict(res: VerdictResult): void {
   toggle?.addEventListener('change', async () => {
     const updated = await send({ type: 'setPlayTonight', key: res.key, value: toggle.checked });
     if (updated) renderVerdict(updated);
+  });
+
+  const watchBtn = document.getElementById('popup-watch-btn');
+  watchBtn?.addEventListener('click', async () => {
+    const defaultTarget =
+      res.facts.price.historicalLow ??
+      (res.facts.price.current != null ? Number((res.facts.price.current * 0.75).toFixed(2)) : null);
+    const updated = await send({
+      type: 'toggleWatch',
+      key: res.key,
+      title: res.facts.title,
+      steamAppId: res.facts.steamAppId,
+      targetPrice: defaultTarget,
+      currency: res.facts.price.currency ?? 'USD',
+    });
+    if (updated) renderVerdict(updated);
+    send({ type: 'getSeasonal' }).then(renderSeasonal).catch(() => {});
   });
 
   const markOwnedBtn = document.getElementById('popup-mark-owned-btn');
@@ -380,7 +413,45 @@ function renderSeasonal(ov: SeasonalOverview): void {
       `
       : '';
 
+  const watchlist = ov.watchlist ?? [];
+  const watchlistHtml =
+    watchlist.length > 0
+      ? `
+        <div class="section-title">Watched Games &amp; Alerts (${watchlist.length})</div>
+        <div class="radar-card">
+          ${watchlist
+            .map((w) => {
+              const targetStr = w.targetPrice != null ? `≤ ${fmtMoney(w.targetPrice, w.currency)} or free/bundle` : 'Freebie or bundle';
+              const trig = w.triggered;
+              return `
+                <div class="radar-row">
+                  <span class="radar-left" style="flex-wrap:wrap">
+                    <span class="radar-icon" style="color:${trig ? '#a4d007' : '#66c0f4'}">${ICONS.tag}</span>
+                    <button class="util-btn" data-watch-load="${escapeHtml(w.key)}" data-watch-title="${escapeHtml(w.title)}" data-watch-app="${w.steamAppId ?? ''}" style="color:#fff;font-weight:600;padding:0">${escapeHtml(w.title)}</button>
+                    ${
+                      trig
+                        ? `<span class="wishlist-tag" style="color:#a4d007;border-color:#a4d007">★ ${escapeHtml(trig.reason)}</span>`
+                        : `<span style="color:#8f98a0;font-size:11px">(${escapeHtml(targetStr)})</span>`
+                    }
+                  </span>
+                  <span style="display:inline-flex;align-items:center;gap:6px">
+                    ${
+                      trig?.url
+                        ? `<a href="${escapeHtml(trig.url)}" target="_blank" rel="noopener noreferrer" style="color:#a4d007;font-size:11px;font-weight:700;text-decoration:none">Open ↗</a>`
+                        : ''
+                    }
+                    <button class="util-btn" data-watch-rm="${escapeHtml(w.key)}" title="Remove watch alert" style="color:#8f98a0;font-size:13px;padding:0 3px">×</button>
+                  </span>
+                </div>
+              `;
+            })
+            .join('')}
+        </div>
+      `
+      : '';
+
   seasonalRoot.innerHTML = `
+    ${watchlistHtml}
     ${liveBundlesHtml}
     <div class="section-title">Upcoming Giveaways &amp; Sales</div>
     <div class="radar-card">
@@ -396,6 +467,23 @@ function renderSeasonal(ov: SeasonalOverview): void {
       ${winHtml}
     </div>
   `;
+
+  seasonalRoot.querySelectorAll<HTMLButtonElement>('[data-watch-load]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const appId = btn.dataset.watchApp ? Number(btn.dataset.watchApp) : undefined;
+      void loadVerdict({ steamAppId: appId, title: btn.dataset.watchTitle });
+    });
+  });
+
+  seasonalRoot.querySelectorAll<HTMLButtonElement>('[data-watch-rm]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const key = btn.dataset.watchRm;
+      if (!key) return;
+      await send({ type: 'removeWatch', key });
+      const freshOv = await send({ type: 'getSeasonal' });
+      renderSeasonal(freshOv);
+    });
+  });
 }
 
 async function initSteamOnboardingStrip(): Promise<void> {

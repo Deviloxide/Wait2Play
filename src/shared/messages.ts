@@ -8,6 +8,7 @@ import type {
   Settings,
   Verdict,
   VerdictResult,
+  WatchlistEntry,
 } from './types';
 
 /** All messages accepted by the background service worker. */
@@ -16,6 +17,30 @@ export type Request =
   | { type: 'search'; query: string }
   | { type: 'setPlayTonight'; key: string; value: boolean }
   | { type: 'markOwned'; source: LibrarySource; title: string; steamAppId?: number; key: string }
+  | {
+      type: 'toggleWatch';
+      key: string;
+      title: string;
+      steamAppId?: number | null;
+      targetPrice: number | null;
+      currency?: string;
+    }
+  | { type: 'removeWatch'; key: string }
+  | {
+      type: 'setGameOverride';
+      rawTitle: string;
+      override: { title: string; steamAppId?: number | null };
+      currentQuery: GameQuery;
+    }
+  | { type: 'clearGameOverride'; rawTitle: string; currentQuery: GameQuery }
+  | {
+      type: 'recordLiveBundle';
+      bundleTitle: string;
+      bundleUrl: string;
+      store: string;
+      price: number | null;
+      games: string[];
+    }
   | { type: 'getSeasonal' }
   | { type: 'getSettings' }
   | { type: 'saveSettings'; settings: Partial<Settings> }
@@ -33,6 +58,7 @@ export type Request =
   | { type: 'exportBackup' }
   | { type: 'importBackup'; json: string }
   | { type: 'setBadge'; verdict: Verdict | null; freebieProbability?: number }
+  | { type: 'openOptions' }
   | { type: 'clearCache' };
 
 export interface ResponseMap {
@@ -40,6 +66,11 @@ export interface ResponseMap {
   search: SearchHit[];
   setPlayTonight: VerdictResult | null;
   markOwned: VerdictResult | null;
+  toggleWatch: VerdictResult | null;
+  removeWatch: WatchlistEntry[];
+  setGameOverride: VerdictResult | null;
+  clearGameOverride: VerdictResult | null;
+  recordLiveBundle: true;
   getSeasonal: SeasonalOverview;
   getSettings: Settings;
   saveSettings: Settings;
@@ -57,6 +88,7 @@ export interface ResponseMap {
   exportBackup: string;
   importBackup: { libraries: number; history: number; steamGames: number };
   setBadge: true;
+  openOptions: true;
   clearCache: true;
 }
 

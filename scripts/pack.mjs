@@ -19,7 +19,27 @@ const rawMarker = 'String.raw`[';
 const markerIdx = seedSrc.indexOf(rawMarker);
 const arrStart = markerIdx >= 0 ? markerIdx + rawMarker.length - 1 : seedSrc.indexOf('[\n');
 const arrEnd = seedSrc.lastIndexOf(']`');
-const records = arrStart >= 0 && arrEnd > arrStart ? JSON.parse(seedSrc.slice(arrStart, arrEnd + 1)) : [];
+const seedRecords = arrStart >= 0 && arrEnd > arrStart ? JSON.parse(seedSrc.slice(arrStart, arrEnd + 1)) : [];
+let existingFeedRecords = [];
+const existingFeedPath = resolve(feedDir, 'history.json');
+if (existsSync(existingFeedPath)) {
+  try {
+    const parsed = JSON.parse(readFileSync(existingFeedPath, 'utf8'));
+    if (Array.isArray(parsed?.records)) existingFeedRecords = parsed.records;
+  } catch {
+    // ignore
+  }
+}
+const seenKeys = new Set();
+const records = [];
+for (const r of [...existingFeedRecords, ...seedRecords]) {
+  if (!r || !r.title || !r.service || !r.start) continue;
+  const k = `${String(r.title).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()}|${r.service}|${String(r.start).slice(0, 7)}`;
+  if (seenKeys.has(k)) continue;
+  seenKeys.add(k);
+  records.push(r);
+}
+records.sort((a, b) => String(b.start).localeCompare(String(a.start)));
 const feedJson = JSON.stringify({ updatedAt: new Date().toISOString().slice(0, 10), records }, null, 2);
 writeFileSync(resolve(feedDir, 'history.json'), feedJson, 'utf8');
 mkdirSync(resolve(distDir, 'feed'), { recursive: true });
