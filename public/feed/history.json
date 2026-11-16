@@ -1,6 +1,574 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-16",
   "records": [
+    {
+      "title": "Viscera Cleanup Detail",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Fantasy General II",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Fallen Aces",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Grapple Dog",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Terminator: Dark Fate - Defiance",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Tiny Terry's Turbo Trip",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Mark of the Deep",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Aerial_Knight's We Never Yield",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Blackthorn Arena: Reforged",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Train Sim World® 7: Southeastern Highspeed: London St Pancras - Ashford Intl & Faversham Route Add-On",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Train Sim World® 7: Northeast Corridor: Boston - Providence",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Train Sim World® 7: Free Starter Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-16",
+      "note": "Movember Charity Bundle (2026) (Fanatical)",
+      "end": "2026-12-30T16:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/movember-charity-bundle-2026"
+    },
+    {
+      "title": "Bug Academy",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "THE CORRIDOR",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Comedy Night",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Pilgrims",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Nerd Simulator",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Mr Toilet",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Astrologaster",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Barn Finders",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Squirrel Stapler",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Ghost Keeper",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Who's Your Daddy",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Journey To The Savage Planet",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Trombone Champ",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Seriously Unserious Collection Bundle (Humble Bundle)",
+      "end": "2026-12-05T05:00:51.000Z",
+      "url": "https://www.humblebundle.com/games/seriously-unserious-collection"
+    },
+    {
+      "title": "Generation Zero®",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Alpine Unrest",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - FNIX Rising",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - US Weapons Pack 2",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Tactical Equipment Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Motorbikes Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Eastern European Weapons Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Companion Accessories Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Advanced Intelligence Cosmetics Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Reinforced Flakmoped Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Heavy Weapons Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Schweet Vanity Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - US Weapons Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Soviet Weapons Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Base Defense Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Base Support Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Resistance Weapons Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Camo Weapon Skins Pack",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "Generation Zero® - Tactical Equipment Pack 2",
+      "service": "humble_bundle",
+      "start": "2026-11-13",
+      "note": "Generation Zero: Complete Bundle 2026 (Humble Bundle)",
+      "end": "2026-12-05T02:00:35.000Z",
+      "url": "https://www.humblebundle.com/games/generation-zero-complete-bundle-2026"
+    },
+    {
+      "title": "System Shock: Enhanced Edition",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "Star Wars - Bounty Hunter",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "System Shock",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "Star Wars™: Episode I: Jedi Power Battles™",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "The Thing: Remastered",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "System Shock 2: 25th Anniversary Remaster",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "Dungeons & Dragons Neverwinter Nights 2: Enhanced Edition",
+      "service": "other",
+      "start": "2026-11-13",
+      "note": "Masterful Remasters Bundle II (GreenMan Gaming)",
+      "end": "2026-12-04T18:00:20.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/masterful-remasters-bundle-volume-ii/"
+    },
+    {
+      "title": "Construction Simulator: Gold-Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Immortality",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Vox Machinae",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "The Mortuary Assistant",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Silly Polly Beast",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Coridden",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "First Dwarf",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "VOIDFACE",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "The Elder Scrolls Online Deluxe Collection: Necrom",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Bus Simulator 21 Next Stop - Gold Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "High On Life: DLC Bundle",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "MISERY",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Teeto",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Strange Antiquities",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Police Simulator: Patrol Officers: Gold Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Lonely Mountains: Snow Riders",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "Heroes of Science and Fiction",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "NUTMEG! A Nostalgic Deckbuilding Football Manager",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "The Caribou Trail",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
+    {
+      "title": "KuloNiku: Bowl Up! Deluxe Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-13",
+      "note": "Build Your Own Play on the Go Bundle (Elite Collection) (Fanatical)",
+      "end": "2026-12-17T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-play-on-the-go-elite-collection"
+    },
     {
       "title": "Knightica",
       "service": "epic",
@@ -2944,6 +3512,78 @@
       "note": "Build Your Own Legendary Bundle (Fall 2026) (Fanatical)",
       "end": "2026-11-26T08:00:00.000Z",
       "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-legendary-bundle"
+    },
+    {
+      "title": "Audio Trip",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "RAGER",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "Out of Sight VR",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "Genotype",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "Surviving Mars: Pioneer",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "Wrath: Aeon of Ruin VR - Brutal Edition",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "Roboquest VR",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "VRacer Hoverbike",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
+    },
+    {
+      "title": "I AM YOUR BEAST VR",
+      "service": "humble_bundle",
+      "start": "2026-10-20",
+      "note": "Flat2VR Bundle (Humble Bundle)",
+      "end": "2026-11-18T05:00:00.000Z",
+      "url": "https://www.humblebundle.com/games/flat2vr-bundle"
     },
     {
       "title": "Last Room",
