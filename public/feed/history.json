@@ -1,6 +1,672 @@
 {
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-19",
   "records": [
+    {
+      "title": "Mark of the Deep",
+      "service": "epic",
+      "start": "2026-11-19"
+    },
+    {
+      "title": "Phoenix Wright: Ace Attorney Trilogy",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter: World Deluxe Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Onimusha: Warlords / 鬼武者",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Okami HD",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "RESIDENT EVIL 7 biohazard Gold Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Mega Man Zero/ZX Legacy Collection",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Mega Man X Legacy Collection 1+2 Bundle",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Dead Rising 3 Apocalypse Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Dead Rising 4 Frank's Big Package",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter World: Iceborne Digital Deluxe",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "MONSTER HUNTER RISE Deluxe Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter Stories 2: Wings of Ruin",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter Stories 2: Wings of Ruin - Deluxe Kit",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter Stories",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "The Great Ace Attorney Chronicles",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Monster Hunter Rise: Sunbreak Deluxe Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Resident Evil Village Gold Edition",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Ghost Trick: Phantom Detective",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Capcom Arcade Stadium Complete Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "MEGA MAN X DiVE Offline",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "RESIDENT EVIL 2 (2019)",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "RESIDENT EVIL 3 (2020)",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Resident Evil: Revelations 1 & 2 Deluxe Double Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Resident Evil & Resident Evil 0 Double Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Resident Evil 6 Complete & Resident Evil 7 Biohazard Double Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Dead Rising 2 & Dead Rising 2: Off the Record Double Pack",
+      "service": "fanatical_bundle",
+      "start": "2026-11-19",
+      "note": "Build Your Own Capcom Collection (Black Friday Edition) (Fanatical)",
+      "end": "2026-11-30T23:59:05.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/capcom-collection-build-your-own-bundle"
+    },
+    {
+      "title": "Styx: Master of Shadows",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Styx: Shards of Darkness - The Akenash Set",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Styx: Shards of Darkness",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Perfect Heist",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Midnight Ghost Hunt",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Deceive Inc.",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Perfect Heist 2",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Deceive Inc. - Black Tie",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Perfect Heist 2 - Historic Characters",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Deceive Inc. Ultimate Edition",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Blood West",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Intravenous 2",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Shadows of Doubt",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Gloomwood",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Covert Operations: Stealth Bundle (Humble Bundle)",
+      "end": "2026-12-10T05:00:21.000Z",
+      "url": "https://www.humblebundle.com/games/covert-operations-stealth-bundle"
+    },
+    {
+      "title": "Bread & Fred",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Back 4 Blood: Ultimate Edition",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Ember Knights",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Crime Boss: Rockay City",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "POPUCOM",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Ale & Tale Tavern",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "DuneCrawl",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Aragami Collection",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Big Hops Together",
+      "service": "humble_bundle",
+      "start": "2026-11-18",
+      "note": "Better with Friends Co-op Buddy Packs (Humble Bundle)",
+      "end": "2026-12-08T05:00:08.000Z",
+      "url": "https://www.humblebundle.com/games/better-with-friends-co-op-buddy-packs"
+    },
+    {
+      "title": "Vasilisa's torment",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Invention 4",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "To the Basement. Before",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Bone Marrow 2",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Threshold Warden",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "The Horror Occultist",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Yolk & Yonder",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Omni Growth",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Elder Gate",
+      "service": "other",
+      "start": "2026-11-18",
+      "note": "Cursed Gate Bundle (IndieGala)",
+      "end": "2027-01-18T12:00:34.000Z",
+      "url": "https://www.indiegala.com/bundle/cursed-gate-bundle"
+    },
+    {
+      "title": "Contractor: The Clean Up Part 2",
+      "service": "epic",
+      "start": "2026-11-17"
+    },
+    {
+      "title": "SOMA",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Turbo Dismount",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Oxygen Not Included",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Breathedge",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Paint the Town Red",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Anger foot",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Poppy Playtime - Chapter 2",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Choo-Choo Charles",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Oxygen Not Included Soundtrack",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Paint the Town Red Soundtrack",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Anger Foot Soundtrack",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Jacksepticeye's Thankmas 2026 Collection (Digiphile)",
+      "end": "2026-12-06T06:00:36.000Z",
+      "url": "https://www.digiphile.co/thankmas?linkId=lp_988272&sourceId=itad&tenantId=digiphile"
+    },
+    {
+      "title": "Killing Floor",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Red Orchestra 2: Heroes of Stalingrad",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Road Redemption",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Rising Storm 2: Vietnam - Digital Deluxe Edition",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Road Redemption: Name A Character",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Road Redemption - Concept Art and Videos",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Killing Floor 2 Digital Deluxe Edition",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Road Redemption - Revengers Assemble",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Chivalry 2",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Maneater Apex Edition",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Chivalry 2 King's Edition Content",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
+    {
+      "title": "Rogue Waters",
+      "service": "other",
+      "start": "2026-11-17",
+      "note": "Tripwire Interactive: Mayhem & Combat Bundle (GreenManGaming)",
+      "end": "2026-12-08T18:00:00.000Z",
+      "url": "https://www.greenmangamingbundles.com/bundles/tripwire-interactive-mayhem-combat-bundle/"
+    },
     {
       "title": "Viscera Cleanup Detail",
       "service": "fanatical_bundle",
