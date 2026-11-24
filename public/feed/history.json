@@ -1,6 +1,67 @@
 {
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-24",
   "records": [
+    {
+      "title": "Lonesome Village",
+      "service": "epic",
+      "start": "2026-11-20"
+    },
+    {
+      "title": "Lost For Swords",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "Doors of Insanity: ReOpened",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "STICKER/BALL",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "Into The Grid",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "Hungry Horrors",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "Zoominoes",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
+    {
+      "title": "Panzer Deck",
+      "service": "humble_bundle",
+      "start": "2026-11-20",
+      "note": "Deck the Halls with Deckbuilders Bundle (Humble Bundle)",
+      "end": "2026-12-12T04:59:59.000Z",
+      "url": "https://www.humblebundle.com/games/deck-the-halls-with-deckbuilders"
+    },
     {
       "title": "Mark of the Deep",
       "service": "epic",
@@ -7854,6 +7915,22 @@
       "start": "2024-07-02",
       "steamAppId": 1202130,
       "publisher": "Slitherine"
+    },
+    {
+      "title": "NeuroVoider",
+      "service": "fanatical_bundle",
+      "start": "2024-07-01",
+      "note": "NeuroVoider: Deluxe Edition Bundle (Fanatical)",
+      "end": "2026-11-28T00:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/neurovoider-deluxe-edition"
+    },
+    {
+      "title": "NeuroVoider - Deluxe Upgrade",
+      "service": "fanatical_bundle",
+      "start": "2024-07-01",
+      "note": "NeuroVoider: Deluxe Edition Bundle (Fanatical)",
+      "end": "2026-11-28T00:00:00.000Z",
+      "url": "https://www.fanatical.com/en/bundle/neurovoider-deluxe-edition"
     },
     {
       "title": "Sunless Skies: Sovereign Edition",
