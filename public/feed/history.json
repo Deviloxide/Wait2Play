@@ -1,6 +1,459 @@
 {
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-27",
   "records": [
+    {
+      "title": "Bread and Fred",
+      "service": "epic",
+      "start": "2026-11-26"
+    },
+    {
+      "title": "WRATH: Aeon of Ruin",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "DOOM Eternal",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Tower of Guns",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Mothergunship",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Quake 4",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Immortal Redneck",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "POSTAL 4: No Regerts",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "ULTRAKILL",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "DOOM 64",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "BPM: BULLETS PER MINUTE",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Viscerafest",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Diluvian Ultra",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "HYPERVIOLENT",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "POSTAL: Brain Damaged",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Dread Templar",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Anomalous",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Forgive me Father",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Slayers X: Terminal Aftermath: Vengance of the Slayer",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Voltage High Society",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Battle Shapers",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Twilight Town: A Cyberpunk FPS",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Beyond Sunset",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Hands of Necromancy II",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Twilight Manor: Roguelite FPS",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Nasty Zombies",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "HELLBREAK",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Bloodshed",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Blood Vial",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Shooty Shooty Robot Invasion",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Golden Chambers",
+      "service": "fanatical_bundle",
+      "start": "2026-11-26",
+      "note": "Build Your Own Boomer Shooter Bundle (Fanatical)",
+      "end": "2026-12-13T15:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-boomer-shooter-bundle"
+    },
+    {
+      "title": "Pharaoh: A New Era",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "Republic of Pirates",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "Farlanders",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "War for the Overworld",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "War for the Overworld - Heart of Gold Expansion",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "War for the Overworld - My Pet Dungeon Expansion",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "Galacticare",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "Worshippers of Cthulhu",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "STARIO: Haven Tower",
+      "service": "humble_bundle",
+      "start": "2026-11-25",
+      "note": "Builder's Blueprint Bundle (Humble Bundle)",
+      "end": "2026-12-17T05:00:09.000Z",
+      "url": "https://www.humblebundle.com/games/builders-blueprint-bundle"
+    },
+    {
+      "title": "Coromon",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Everholm",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Chillquarium",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "The Holy Gosh Darn",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Axyz",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Pieced Together",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Tailside: Cozy Cafe Sim",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Tiny Terraces",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Lonely House",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Unboxathon",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Puzzling Places - 3D Jigsaw Sim",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Mr Toilet",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Pupple Pop",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Infinite Ruins",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Big Bad Pharma",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Tidy Mart",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
+    {
+      "title": "Mall: Tidy Up Together",
+      "service": "fanatical_bundle",
+      "start": "2026-11-24",
+      "note": "Build Your Own Casual Bundle (Fanatical)",
+      "end": "2026-12-28T14:00:00.000Z",
+      "url": "https://www.fanatical.com/en/pick-and-mix/build-your-own-casual-bundle"
+    },
     {
       "title": "Lonesome Village",
       "service": "epic",
